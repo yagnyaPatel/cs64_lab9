@@ -1,0 +1,14 @@
+2).There are 4 unique states: output 1,2,4, and 8. Therefore, this requires 2 bits, which translates to 2 latches/flip-flops.
+
+3). TRUTH TABLE.
+Num A B C D E F G bit| A* B* C* D* E* F* G* Num* bit*
+1   0 1 1 0 0 0 0 00   1  1  0  1  1  0  1  2	 01
+2   1 1 0 1 1 0 1 01   0  1  1  0  0  1  1  4	 10
+4   0 1 1 0 0 1 1 10   1  1  1  1  1  1  1  8	 11
+8   1 1 1 1 1 1 1 11   0  1  1  0  0  0  0  1	 00
+
+4). Minimal sum of products formula for A is: 
+    A = B1 (B1 is right-most bit)
+
+5). Minimal sum of products formula for right-most bit is:
+B1* = !B1 (B1 is right-most bit)

@@ -1,0 +1,19 @@
+2). We have 5 states: "initial" found "0" , "01", "011", and "0110". 5 states require 3 bits to express, therefore were require 3 latches/flip-flops.
+
+3). 
+
+State		| Bit representation | Input || State* | Bit* || Output
+Initial S0	  000			0	S1	 001			
+					1	S0	 000
+Found "0" S1	  001			0	S1   	 001
+					1	S2       010
+Found "01" S2	  010			0	S1       001
+					1	S3       011
+Found "011" S3    011			0	S4	 100
+					1	S0       000
+Found "0110" S4   100			0	S1       001     U
+					1	S2       010	 U
+
+4). U = B0!B1!B2 (B0 is left-most bit, B2 is right-most bit)
+
+5). B2* = !B2!I + !B0B1!B2 + !B0B1B2!I
